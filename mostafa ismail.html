@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Ismail's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('https://source.unsplash.com/1600x900/?coding') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+        }
+        #showcase h1 {
+            margin-top: 40px;
+            font-size: 55px;
+            margin-bottom: 10px;
+            animation: slideIn 1s ease-in-out;
+        }
+        #showcase p {
+            font-size: 20px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .content h2 {
+            margin-top: 0;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+        .icon {
+            width: 40px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: #77aaff;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .contact-icon {
+    margin-right: 10px;
+}
+
+.contact-icon::before {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+/* Style links */
+.content a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+.content a:hover {
+    text-decoration: underline;
+}
+/* Apply professional background to all sections */
+.content {
+    background-color: #f9f9f9; /* Light gray background color */
+    background-image: url('your-background-image-url.jpg'); /* Replace 'your-background-image-url.jpg' with your actual background image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0; /* Adjust padding as needed */
+}
+
+/* Slow-motion animation for text */
+.content {
+    animation: fadeInSlow 2s ease-in-out;
+}
+
+@keyframes fadeInSlow {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style links */
+.content a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+.content a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Mostafa Ismail</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('about')">About Me</a></li>
+                    <li><a href="#" onclick="showSection('experience')">Experience</a></li>
+                    <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                    <li><a href="https://www.dropbox.com/scl/fi/pwl5i8hs4k7nqu6xchcre/mostafa-ismail-backend-developer-1.pdf?rlkey=f1coy7adxq8d7pvuo6un6w86b&e=1&st=5dcyaps9&dl=0">Cv</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <div class="container">
+                <h1>Welcome, I'm Mostafa Ismail</h1>
+                <p>Professional Backend Developer</p>
+                
+            </div>
+        </div>
+    </section>
+    <section id="home" class="content">
+        <div class="container">
+            <h2 class="section-title">Home</h2>
+            <h1>Welcome, I'm Mostafa Ismail</h1>
+            <p>Professional Backend Developer</p>
+            <p>I specialize in developing robust backend solutions for web applications. With expertise in PHP, Laravel, MySQL, and other technologies, I have a proven track record of delivering high-quality projects that meet clients' needs.</p>
+            <p>Explore my portfolio to learn more about my work and experience.</p>
+        </div>
+    </section>
+
+    <section id="about" class="content" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>I'm a backend developer from Cairo, Egypt. I have experience in developing backend applications and services using Laravel, MySQL, and other tools. With a strong foundation in both front-end and back-end development, I am dedicated to creating robust and scalable solutions that meet clients' needs.</p>
+            <p>My key strengths include:</p>
+            <ul>
+                <li>Proficient in PHP, Laravel, and MySQL</li>
+                <li>Experience with JavaScript, HTML, and CSS</li>
+                <li>Strong problem-solving skills</li>
+                <li>Excellent communication and teamwork abilities</li>
+                <li>Detail-oriented and committed to quality</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience" class="content" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="card">
+                <h3>2024/01 – Present: Backend Developer at idaam.cloud</h3>
+                <ul>
+                    <li>Refactored legacy code to improve reliability, scalability, and maintainability.</li>
+                    <li>Implemented a microservices architecture to improve system modularity and reduce dependencies between components.</li>
+                    <li>Optimized database queries to improve application performance.</li>
+                    <li>Developed a RESTful API to handle daily requests with quick response.</li>
+                    <li>Developed a system to monitor application performance and alert stakeholders of any potential issues.</li>
+                    <li>Project link: <a href="https://dev.id3m.dev" target="_blank">dev.id3m.dev</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>2023/09 – 2023/12: Full Stack Developer at prizm energy</h3>
+                <ul>
+                    <li>Developed a full stack web application from scratch, including backend services, front-end interface, and database.</li>
+                    <li>Developed a modern user interface for a full stack web application to improve user engagement.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="content" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="card">
+                <h3>Lend me</h3>
+                <p>This application allows users to borrow money from their friends who are in their contacts if they use the application. I worked as the backend developer using Laravel and MySQL.</p>
+                <p>GitHub Repository: <a href="https://github.com/mostafaismaileltawel/lend-me" target="_blank">lend-me</a></p>
+            </div>
+            <div class="card">
+                <h3>store</h3>
+                <p> This website is a for-store platform where each store has its own owner who can perform all operations for their store. I worked on it as a full stack developer using Laravel, MySQL, and Pusher.</p>
+                <p>GitHub Repository: <a href="https://github.com/mostafaismaileltawel/store" target="_blank">store</a></p>
+            </div>
+            <div class="card">
+                <h3>coffee</h3>
+                <p>This website is a coffee website to oreder your drink .</p>
+                <p>GitHub Repository: <a href="https://github.com/mostafaismaileltawel/coffee" target="_blank">coffee</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content" style="display: none;">      
+          <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p><span class="contact-icon">&#9993;</span> Email: <a href="mailto:mostafaeltawel123@gmail.com">mostafaeltawel123@gmail.com</a></p>
+            <p><span class="contact-icon">&#9742;</span> Phone: <a href="tel:01066235786">01066235786</a></p>
+            <p><span class="contact-icon">&#128187;</span> GitHub: <a href="https://github.com/mostafaismaileltawel" target="_blank">mostafaismaileltawel</a></p>
+            <p><span class="contact-icon">&#128101;</span> LinkedIn: <a href="https://www.linkedin.com/in/mostafa-ismail-58a6ba2a2" target="_blank">Mostafa Ismail</a></p>
+        </div>
+    </section>
+   
+
+    <footer>
+        <div class="container">
+            <p>Mostafa Ismail &copy; 2024</p>
+        </div>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
